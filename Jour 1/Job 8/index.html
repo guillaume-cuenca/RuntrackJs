@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Somme de Nombres Premiers</title>
+</head>
+<body>
+    <h1>Somme de Nombres Premiers</h1>
+    <p>Entrez deux nombres pour voir leur somme si ce sont des nombres premiers :</p>
+    <input type="number" id="nombre1" placeholder="Nombre 1">
+    <input type="number" id="nombre2" placeholder="Nombre 2">
+    <button onclick="afficherSomme()">Calculer la somme</button>
+    
+    <p id="resultat"></p>
+
+    <script src="script.js" defer></script>
+    <script>
+        function afficherSomme() {
+            var nombre1 = parseInt(document.getElementById("nombre1").value);
+            var nombre2 = parseInt(document.getElementById("nombre2").value);
+
+            var resultat = sommeNombresPremiers(nombre1, nombre2);
+
+            if (resultat !== false) {
+                document.getElementById("resultat").innerText = "La somme des nombres premiers est : " + resultat;
+            } else {
+                document.getElementById("resultat").innerText = "Au moins un des nombres n'est pas premier.";
+            }
+        }
+    </script>
+</body>
+</html>
