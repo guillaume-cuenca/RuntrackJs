@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bouton JavaScript</title>
+</head>
+<body>
+
+<p id="citation" style="display: none;">“Les logiciels et les cathédrales, c'est un peu la même chose - d'abord, on les construit, ensuite, on prie.”</p>
+
+<button id="afficherBtn">Afficher Citation</button>
+<button id="cacherBtn">Cacher Citation</button>
+
+<script>
+  // Sélection du bouton afficher
+  const afficherBtn = document.getElementById('afficherBtn');
+  // Sélection du bouton cacher
+  const cacherBtn = document.getElementById('cacherBtn');
+  // Sélection de l'élément contenant la citation
+  const citation = document.getElementById('citation');
+
+  // Fonction pour afficher la citation
+  afficherBtn.addEventListener('click', function() {
+    citation.style.display = 'block';
+  });
+
+  // Fonction pour cacher la citation
+  cacherBtn.addEventListener('click', function() {
+    citation.style.display = 'none';
+  });
+</script>
+
+</body>
+</html>
